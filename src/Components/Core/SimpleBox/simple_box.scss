@@ -1,0 +1,13 @@
+.simple-box-container {
+  margin: 10% auto;
+  .box {
+    padding: 30px;
+    background: white;
+  }
+  .simple-box-title {
+    font-size: 1.3em;
+    .title {
+      text-align: center;
+    }
+  }
+}

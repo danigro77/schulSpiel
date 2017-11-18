@@ -1,0 +1,23 @@
+@import "~foundation-sites/scss/foundation.scss";
+
+@include foundation-flex-grid;
+@include foundation-flex-classes;
+@include foundation-everything;
+
+@import "./Components/Core/ButtonRow/button_row";
+@import "./Components/Core/SimpleBox/simple_box";
+@import "./Components/Core/InputField/input_field";
+@import "./Components/Core/MessageBox/message_box";
+
+@import "Containers/Auth/auth";
+@import "Containers/Home/LandingPage/landing_page";
+
+body {
+  background: gainsboro;
+
+  .row {
+    & > .grid-x {
+      width: 100%;
+    }
+  }
+}
