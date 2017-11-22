@@ -1,5 +1,5 @@
 {
-  "name": "zedge-marketplace",
+  "name": "schulSpiel",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -57,19 +57,26 @@
     "test": "node scripts/test.js --env=jsdom"
   },
   "devDependencies": {
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "enzyme-to-json": "^3.2.2",
+    "identity-obj-proxy": "^3.0.0",
     "node-sass": "^4.6.1",
-    "sass-loader": "^6.0.6"
+    "react-test-renderer": "^16.1.1",
+    "sass-loader": "^6.0.6",
+    "sinon": "^4.1.2"
   },
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,mjs}"
     ],
     "setupFiles": [
-      "<rootDir>/config/polyfills.js"
+      "<rootDir>/config/polyfills.js",
+      "<rootDir>/config/jestconfig.js"
     ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
-      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
+      "<rootDir>/src/**/**/**/?(*.)(spec|test).{js,jsx,mjs}"
     ],
     "testEnvironment": "node",
     "testURL": "http://localhost",
@@ -82,7 +89,8 @@
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
     ],
     "moduleNameMapper": {
-      "^react-native$": "react-native-web"
+      "^react-native$": "react-native-web",
+      "^.+\\.(css|scss)$": "identity-obj-proxy"
     },
     "moduleFileExtensions": [
       "web.js",
